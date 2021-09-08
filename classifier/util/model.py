@@ -100,7 +100,8 @@ class ModelUtility:
         def _model_from_h5():
             """Specific to using a single Hadoop(H5) file"""
             params_file = self.file_paths[0]
-            # TODO: load a tf.keras.models to instaniate from the H5 file
+            # TODO: use the tf.keras.models module to instaniate a new Keras model object 
+            #       from the H5 file
             # TODO: return the new model object
 
         # First download the model, if needed
