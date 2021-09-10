@@ -1,19 +1,19 @@
 import os
 from pathlib import Path
 
-# General info about the API
-API_TITLE = "DeepFire"
-API_DESCRIPTION = "A REST API for detecting the presence of fire in an image."
-API_VERSION = "0.0.2"
+# TODO: give some general info about the API
+API_TITLE = "TODO"
+API_DESCRIPTION = "TODO"
+API_VERSION = "TODO"
 
-# OPTIONAL: Share metadata about what users can request from the endpoints.
+# STRETCH CHALLENGE: Share metadata about what users can request from the endpoints.
 # These are intended shown on the UI, related only to a specific endpoint.
 # Note: the value in the "name" field should match what goes in the
 #       "tags" parameter of the corresponding app route in main.py!!
 API_ENDPOINT_METADATA = (
     {
-        "name": "",
-        "description": "",
+        "name": "TODO",
+        "description": "TODO",
     },
 )
 
