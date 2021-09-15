@@ -45,7 +45,9 @@ More points and potential bonus points will be awarded for more creative changes
 
 - The `model_sha256` argument should be a SHA-256 hash that you can get by going to your project releases and clicking on the seven-digit pre-hash key below the release version tag. 
 
-7. Run your project locally and upload a test image to attain accuracy calculation. Take a screenshot of that and place it within your project subfolder for full project completion. 
+7. Run your project locally and upload a test image to attain accuracy calculation. (NOTE: Follow the `README.md` instructions on **"using a virtual environment"**.)
+
+8. Take a screenshot of that and place it within your project subfolder for full project completion. 
 
 Your final project subfolder should contain the following files:
 - development.ipynb
@@ -55,4 +57,10 @@ Your final project subfolder should contain the following files:
 
 ## ⚡️ BONUS OBJECTIVES ⚡️
 
-Coming soon! 
+- Add additional badges to your GitHub repository to make your project upload more unique! [+2]
+
+- Deploy your project on Heroku instead of having it locally hosted! [+5]
+
+- Create an alternate CNN model using the `ResNet50` model and compare results! [+10]
+
+- **MAJOR CHALLENGE**: Try repeating this same project with a new image dataset and modify all configurations as needed. [+20]
