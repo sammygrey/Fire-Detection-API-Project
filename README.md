@@ -17,19 +17,9 @@ To classify your own images, you can use the live API: use the link [here](https
 ### Running Locally
 You only need to use ONE of the following options:
 
-#### Option #1: Using Docker
-You can download this repository and run it using [Docker](https://www.docker.com/get-started):
+#### Using a Virtual Environment
 
-```
-$ docker compose up
-```
-
-Then head over to [http://localhost:8000/docs](http://localhost:8000/docs) or [http://localhost:8000/redoc](http://localhost:8000/redoc) in the browser.
-
-#### Option #2: Using Virtual Environments
-
-Alternatively, you can also make a virtual environment. This is *recommended*, as it will allow you to also run the automated tests as well 
-(discussed below). Here is the command to install the dependencies locally:
+This will allow you to also run the automated tests as well (discussed below). Here is the command to install the dependencies locally:
 
 ```
 $ python3 -m venv env  
