@@ -57,7 +57,7 @@ class ModelUtility:
 
     def download_model(self):
         """
-        Downloads the model files.
+        Downloads the model files in memory.
 
         This will first check if the files are already present,
         and not corrupted, before downloading from the address
@@ -66,13 +66,19 @@ class ModelUtility:
         Returns:
             None
         """
-        # TODO: Check if each file present in self.file_paths is already on disk,
-        #       and that its sha256 hash is the same as the one found in app/config.yaml.
-        # TODO: If the file IS PRESENT, then just log that it already exists, via a print() call.
-        # TODO: If the file is NOT PRESENT, then download it.
-        #       Hint: read the docs on the tf.keras.utils.get_file function,
-        #             and make sure you add whatever directory you're saving the 
-        #             model files to the .gitignore file!!
+        # Download only the model files that are needed
+        for model_file_path in self.file_paths:
+            if os.path.exists(model_file_path):
+                if self.get_hash(model_file_path) == self.file_sha256:
+                    print(f"File already exists: {model_file_path}")
+            else:  # need to download the model
+                model_file_url = f"{self.url}/{model_file_path}"
+                keras.utils.get_file(
+                    origin=model_file_url,
+                    fname=model_file_path,
+                    cache_dir=".",
+                    cache_subdir="./model",
+                )
 
     def load_model(self, format="composite"):
         """
@@ -93,16 +99,16 @@ class ModelUtility:
         def _model_from_composite_format():
             """Specific to using H5 + JSON as the save format"""
             params_file, layers_file = self.file_paths
-            # TODO: load the model in memory, using the layers specified in the JSON file
-            # TODO: load in the weights and biases of the model, using the parameters file
-            # TODO: return the new model object
+            # load the model in memory
+            with open(f"./model/{layers_file}") as f:
+                model = keras.models.model_from_json(f.read())  # build the layers
+                model.load_weights(f"./model/{params_file}")  # load weights + biases
+            return model
 
         def _model_from_h5():
             """Specific to using a single Hadoop(H5) file"""
             params_file = self.file_paths[0]
-            # TODO: use the tf.keras.models module to instaniate a new Keras model object 
-            #       from the H5 file
-            # TODO: return the new model object
+            return keras.models.load_model(params_file)
 
         # First download the model, if needed
         self.download_model()

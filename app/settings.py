@@ -1,19 +1,19 @@
 import os
 from pathlib import Path
 
-# TODO: give some general info about the API
-API_TITLE = "TODO"
-API_DESCRIPTION = "TODO"
-API_VERSION = "TODO"
+# General info about the API
+API_TITLE = "DeepFire"
+API_DESCRIPTION = "A REST API for detecting the presence of fire in an image."
+API_VERSION = "0.0.2"
 
-# STRETCH CHALLENGE: Share metadata about what users can request from the endpoints.
+# Info about what data users can request.
 # These are intended shown on the UI, related only to a specific endpoint.
 # Note: the value in the "name" field should match what goes in the
 #       "tags" parameter of the corresponding app route in main.py!!
-API_ENDPOINT_METADATA = (
+API_ENDPOINT_DATA = (
     {
-        "name": "TODO",
-        "description": "TODO",
+        "name": "Detect Fire in an Image",
+        "description": "Predicts the possibility that a color image contains fire.",
     },
 )
 
@@ -26,6 +26,6 @@ API_SETTINGS = {
     "title": API_TITLE,
     "description": API_DESCRIPTION,
     "version": API_VERSION,
-    "openapi_tags": API_ENDPOINT_METADATA,
+    "openapi_tags": API_ENDPOINT_DATA,
     "predictor_config_path": CONFIG_PATH,
 }

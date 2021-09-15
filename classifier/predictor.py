@@ -10,17 +10,10 @@ from classifier.util.model import ModelUtility
 
 class ImagePredictor:
     def __init__(self, config: Dict[str, int or str]):
-        """
-        TODO: initialize the instance attrs to the appropiate
-              data found in the config object 
-              (hint: this object is based on the same data you 
-               put in app/config.yaml)
-
-        """
-        # self.model_paths = TODO
-        # self.resize_size = TODO
-        # self.model = TODO
-        # self.targets = TODO
+        self.model_paths = config["model_file_paths"]
+        self.resize_size = config["resize_shape"]
+        self.model = ModelUtility.reconstruct_model(config)
+        self.targets = config["targets"]
 
     @classmethod
     def init_from_config_path(cls, config_path):
