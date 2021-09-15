@@ -13,7 +13,7 @@ To get full credit on this project, you'll have to accomplish at least three maj
 
 For the sake of clarity, all objectives (both required and bonus) will be identified per subdirectory and file.
 
-## 📍 REQUIRED CHALLENGES 📍
+## 📍 REQUIRED OBJECTIVES 📍
 
 1. Save a copy of the `Fire-Detection-Image-Data` to a project subfolder called `dataset`. 
 
@@ -31,4 +31,8 @@ For the sake of clarity, all objectives (both required and bonus) will be identi
 
 - The `model_sha256` argument should be a SHA-256 hash that you can get by going to your project releases and clicking on the seven-digit pre-hash key below the release version tag. 
 
-5. 
+5. Run your project locally and upload a test image to attain accuracy calculation. Take a screenshot of that and display it at the bottom of your project repo's README to signify successful project performance. 
+
+## ⚡️ BONUS OBJECTIVES ⚡️
+
+Coming soon! 
