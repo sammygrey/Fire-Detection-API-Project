@@ -1,11 +1,8 @@
-FROM python:3.6-slim
-COPY app/ /app/
-COPY classifier/ /classifier/
-WORKDIR /
-RUN apt update
-RUN apt install -y git
-RUN apt-get install -y libglib2.0-0
-RUN pip install git+https://github.com/UPstartDeveloper/Fire-Detection-API
-EXPOSE 8080
-
-ENTRYPOINT uvicorn app.main:app --host 0.0.0.0 --port 8080 --workers 1
+# TODO: pull down the "slim" version of Python 3.6
+# TODO: copy the app/ and classifier/ folders, as well as requirements.txt
+# TODO set the working directory
+# TODO: update all the Linux packages
+# TODO: install dependencies like git, ibglib2.0-0, and more!
+# TODO: expose a port (8080 is a popular choice)
+# TODO: run the app locally using uvicorn 
+    # (make sure to use the same port!) and also set --workers equal to 1
