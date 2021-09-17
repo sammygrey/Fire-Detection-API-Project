@@ -10,6 +10,10 @@ __pycache__/
 .DS_Store
 .vscode
 
+# Fire Image Datasets
+dataset/
+*/dataset/
+
 # Keras Models
 model/
 
