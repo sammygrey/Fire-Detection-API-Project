@@ -3,6 +3,6 @@
 # TODO set the working directory
 # TODO: update all the Linux packages
 # TODO: install dependencies like git, ibglib2.0-0, and more!
-# TODO: expose a port (8080 is a popular choice)
+# TODO: expose a port (5000 is a popular choice)
 # TODO: run the app locally using uvicorn 
     # (make sure to use the same port!) and also set --workers equal to 1
