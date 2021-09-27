@@ -29,13 +29,27 @@ Then head over to [http://localhost:8000/docs](http://localhost:8000/docs) or [h
 #### Option #2: Using Virtual Environments
 
 Alternatively, you can also make a virtual environment. This is *recommended*, as it will allow you to also run the automated tests as well 
-(discussed below). Here is the command to install the dependencies locally:### Run the Tests
+(discussed below). Here are the commands to install the dependencies locally:
+
+```
+$ python3 -m venv env  
+$ source env/bin/activate 
+(env) $ python -m pip install -r requirements.txt
+```
+And then run the app using `uvicorn` in the Command Line:
+```
+(env) $ uvicorn app.main:app --reload  
+```
+Then head over to [http://localhost:8000/docs](http://localhost:8000/docs) or [http://localhost:8000/redoc](http://localhost:8000/redoc) in the browser.
+
+### Run the Tests
 To run the tests, you will first need to set up a Python virtual environment to run this project locally (see above). Then you can run the automated tests from the root directory, using the command line:
 ```
 (env) $ pytest
 ```
 If there are no failures, then you should be good to go!
 You can inspect the code for the tests in `app/main_test.py` if you wish.
+
 ## The Data and the Model
 The image dataset and neural network model used for the production API will be documented on the [Releases](https://github.com/UPstartDeveloper/Fire-Detection-API/releases) page of this repository.
 
