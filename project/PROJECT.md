@@ -23,7 +23,7 @@ To get full credit for completing this notebook, ensure you meet the following o
 
 - Full completion of all required objectives across the notebook.
 - Save your model summary as a screenshot and place it within your project subfolder.
-- **Attempt at least THREE hyperparameter changes and tuning efforts across your CNN architecture. These can include the following:
+- **Attempt at least THREE hyperparameter changes and tuning efforts across your CNN architecture. These can include the following:**
     - Different optimizers.
     - Different hyperparameters.
     - New layers.
