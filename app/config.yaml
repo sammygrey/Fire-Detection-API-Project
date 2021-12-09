@@ -2,5 +2,5 @@ resize_shape: [256, 256]
 targets: ["Fire_Images"]
 model_file_paths:
   ["fire_cnn_classifier_params.h5", "fire_cnn_classifier_layers.json"]
-base_model_url: "https://github.com/sammygrey/Fire-Detection-API-Project/releases/tag/v1.0.1"
-model_sha256: "4e474e6610229d5ae5f963eb5e166e45116a0f3a"
+base_model_url: "https://github.com/sammygrey/Fire-Detection-API-Project/releases/tag/production"
+model_sha256: "fb11358d2bbb00c8345085047cb29fe644ac343c"
